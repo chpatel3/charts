@@ -52,7 +52,7 @@ spec:
               valueFrom:
                 secretKeyRef:
                   name: {{ template "hackmd.postgresql.fullname" . }}
-                  key: postgres-password
+                  key: postgresql-password
               {{- else }}
               value: {{ .Values.postgresql.postgresPassword }}
               {{- end }}
